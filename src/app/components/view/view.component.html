@@ -1,0 +1,25 @@
+<div class="card">
+  <table>
+    <thead>
+     <tr>
+       <th>User Name</th>
+       <th>Address</th>
+       <th>Contact</th>
+       <th>Email</th>
+       <th>Update/Delete</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor="let user of users">
+       <td>{{ user.name }}</td>
+       <td>{{ user.address }}</td>
+       <td>{{ user.contact }}</td>
+       <td>{{ user.email }}</td>
+       <td>
+         <button class="btn btn-success" (click)="update(user)">Update</button>
+         <button class="btn btn-danger" (click)="delete(user)">Delete</button>
+       </td>
+     </tr>
+    </tbody>
+  </table>
+</div>
